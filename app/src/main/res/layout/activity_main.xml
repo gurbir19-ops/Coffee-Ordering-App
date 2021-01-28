@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <EditText
+        android:id="@+id/name"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:inputType="text"/>
+    <TextView
+        android:text="@string/toppings"
+        style="@style/HeaderText"
+        android:padding="8dp"
+        />
+    <CheckBox android:id="@+id/checkbox_met"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Whipped Cream"
+        android:paddingRight="24dp"
+        android:paddingLeft="8dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:textSize="16sp" />
+    <CheckBox android:id="@+id/checkbox_choco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chocolate"
+        android:paddingRight="24dp"
+        android:paddingLeft="8dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:textSize="16sp" />
+    <TextView
+        android:text="QUANTITY"
+        style="@style/HeaderText"
+        android:padding="8dp"
+        />
+   <RelativeLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal">
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:text="+"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@id/quantity_text_view"
+        android:onClick="incrementOrder"/>
+    <TextView
+        android:id="@+id/quantity_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/button"
+        android:text="0"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:paddingTop="16dp"
+        android:paddingLeft="8dp"
+
+        />
+    <Button
+        android:id="@+id/button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:text="-"
+        android:layout_marginLeft="8dp"
+        android:onClick="decrementOrder"/>
+   </RelativeLayout>
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ORDER"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:onClick="submitOrder"/>
+</LinearLayout></ScrollView>
